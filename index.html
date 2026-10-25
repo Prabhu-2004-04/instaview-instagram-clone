@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Instagram-inspired responsive social feed UI practice project.">
+  <title>InstaView — Social Feed UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a href="#home" class="wordmark" aria-label="InstaView home">instaview<span>•</span></a>
+    <nav class="side-nav" aria-label="Main navigation">
+      <a class="nav-item active" href="#home"><span class="nav-icon">⌂</span><b>Home</b></a>
+      <a class="nav-item" href="#stories"><span class="nav-icon">◉</span><b>Stories</b></a>
+      <a class="nav-item" href="#explore"><span class="nav-icon">⌕</span><b>Explore</b></a>
+      <button class="nav-item" id="messagesBtn"><span class="nav-icon">➤</span><b>Messages</b><span class="nav-badge">3</span></button>
+      <button class="nav-item" id="notificationsBtn"><span class="nav-icon">♡</span><b>Notifications</b></button>
+      <a class="nav-item" href="#create"><span class="nav-icon">⊞</span><b>Create</b></a>
+      <a class="nav-item" href="#profile"><span class="nav-icon profile-mini">P</span><b>Profile</b></a>
+    </nav>
+    <button class="nav-item more-btn" id="moreBtn"><span class="nav-icon">☰</span><b>More</b></button>
+  </aside>
+
+  <main class="main-layout" id="home">
+    <section class="feed-column">
+      <div class="mobile-header"><a href="#home" class="wordmark">instaview<span>•</span></a><button id="mobileLikeNav" aria-label="Notifications">♡</button></div>
+      <section class="stories" id="stories" aria-label="Stories">
+        <button class="story" data-user="Your story"><span class="story-ring own-story"><span class="story-avatar own-avatar">+</span></span><span>Your story</span></button>
+        <button class="story" data-user="maya.creates"><span class="story-ring"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt=""></span><span>maya.creates</span></button>
+        <button class="story" data-user="arjun.frames"><span class="story-ring"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt=""></span><span>arjun.frames</span></button>
+        <button class="story" data-user="nina.travels"><span class="story-ring"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80" alt=""></span><span>nina.travels</span></button>
+        <button class="story" data-user="the.dailybrew"><span class="story-ring"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt=""></span><span>the.dailybrew</span></button>
+        <button class="story" data-user="kavya.art"><span class="story-ring"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=120&q=80" alt=""></span><span>kavya.art</span></button>
+        <button class="story" data-user="leo.outdoors"><span class="story-ring"><img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=120&q=80" alt=""></span><span>leo.outdoors</span></button>
+      </section>
+
+      <div class="feed-header"><h1>Feed</h1><button id="sortBtn" class="sort-btn">For you <span>⌄</span></button></div>
+      <div class="search-bar"><span>⌕</span><input id="feedSearch" type="search" placeholder="Search people or captions..." aria-label="Search feed"><button id="clearSearch" type="button" aria-label="Clear search">×</button></div>
+
+      <article class="post" id="explore">
+        <header class="post-header"><img class="user-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Maya profile"><div class="post-user"><b>maya.creates <span class="verified">✓</span></b><small>Lisbon, Portugal</small></div><button class="post-more" aria-label="Post options">•••</button></header>
+        <button class="post-image-wrap" aria-label="Like this post by double clicking" data-post="1"><img class="post-image" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85" alt="Golden sunlight over a peaceful mountain lake"><span class="big-heart">♥</span></button>
+        <div class="post-actions"><div><button class="action-btn like-btn" aria-label="Like post" aria-pressed="false">♡</button><button class="action-btn comment-btn" aria-label="Comment">▢</button><button class="action-btn share-btn" aria-label="Share post">➤</button></div><button class="action-btn save-btn" aria-label="Save post" aria-pressed="false">♧</button></div>
+        <div class="post-meta"><b class="like-count">2,481 likes</b><p><b>maya.creates</b> A little reminder to slow down and take the scenic route. 🌿</p><button class="view-comments">View all 38 comments</button><form class="comment-form"><input type="text" placeholder="Add a comment..." aria-label="Add a comment"><button type="submit">Post</button></form></div>
+      </article>
+
+      <article class="post">
+        <header class="post-header"><img class="user-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Arjun profile"><div class="post-user"><b>arjun.frames</b><small>Yesterday · Photography</small></div><button class="post-more" aria-label="Post options">•••</button></header>
+        <button class="post-image-wrap" aria-label="Like this post by double clicking" data-post="2"><img class="post-image" src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=85" alt="A starry night sky above mountains"><span class="big-heart">♥</span></button>
+        <div class="post-actions"><div><button class="action-btn like-btn" aria-label="Like post" aria-pressed="false">♡</button><button class="action-btn comment-btn" aria-label="Comment">▢</button><button class="action-btn share-btn" aria-label="Share post">➤</button></div><button class="action-btn save-btn" aria-label="Save post" aria-pressed="false">♧</button></div>
+        <div class="post-meta"><b class="like-count">986 likes</b><p><b>arjun.frames</b> Somewhere between the earth and the stars. ✨</p><button class="view-comments">View all 12 comments</button><form class="comment-form"><input type="text" placeholder="Add a comment..." aria-label="Add a comment"><button type="submit">Post</button></form></div>
+      </article>
+    </section>
+
+    <aside class="right-column">
+      <div class="my-profile" id="profile"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Your profile"><div><b>prabanjan.dev</b><small>Prabanjan U V</small></div><button class="blue-link" id="switchBtn">Switch</button></div>
+      <div class="suggestion-heading"><b>Suggested for you</b><button id="seeAllBtn">See All</button></div>
+      <div class="suggestion"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=100&q=80" alt=""><div><b>kavya.art</b><small>Followed by maya.creates</small></div><button class="blue-link follow-btn">Follow</button></div>
+      <div class="suggestion"><img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=100&q=80" alt=""><div><b>leo.outdoors</b><small>New to InstaView</small></div><button class="blue-link follow-btn">Follow</button></div>
+      <div class="suggestion"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt=""><div><b>the.dailybrew</b><small>Suggested for you</small></div><button class="blue-link follow-btn">Follow</button></div>
+      <div class="side-note">About · Help · Press · API · Jobs · Privacy · Terms<br>Locations · Language · Meta Verified</div>
+      <small class="copyright">© 2026 INSTAVIEW UI CONCEPT</small>
+    </aside>
+  </main>
+
+  <dialog class="create-dialog" id="createDialog">
+    <form id="createForm" class="create-form">
+      <div class="dialog-header"><b>Create a post</b><button type="button" id="closeCreate" aria-label="Close dialog">×</button></div>
+      <label for="newCaption">Caption</label>
+      <textarea id="newCaption" rows="4" placeholder="Write a caption for your post..." required maxlength="220"></textarea>
+      <div class="dialog-actions"><small id="captionCount">0 / 220</small><button type="submit" class="create-submit">Share post</button></div>
+      <p class="dialog-note">Demo feature: your post appears in this page only and is not uploaded.</p>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <nav class="mobile-bottom" aria-label="Mobile navigation"><a href="#home" aria-label="Home">⌂</a><a href="#explore" aria-label="Explore">⌕</a><button id="mobileCreate" aria-label="Create post">⊞</button><button id="mobileMessages" aria-label="Messages">➤</button><a href="#profile" aria-label="Profile"><span class="bottom-profile">P</span></a></nav>
+  <script src="script.js"></script>
+</body>
+</html>
